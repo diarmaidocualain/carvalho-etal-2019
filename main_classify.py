@@ -47,7 +47,7 @@ def fun_classify(inputFile, groupsSel, FeatSelect, Nfeats,scaleFeats = 1):
 
     #only selected groups
     dfFeats = dfFeats[dfFeats["Group"].isin(groupsSel)]
-    if "decTaime" in dfFeats:
+    if "decTime" in dfFeats:
         x = dfFeats.iloc[:, 2:]#ignores decomposition method execution time
     else:
         x = dfFeats.iloc[:, 1:]
